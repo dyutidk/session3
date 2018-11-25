@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <scrypt src="/js/bootstrap.min.js"></scrypt>
+</head>
+<body>
+    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+        <div class="container">
+            <div class="row">
+                <br>
+                <div class="col-sm-6 col-xs-6">
+                    <h1>CAT Institute of Technology</h1>
+                    <h3>Autonomous Institute Affiliated to Kerala University</h3>
+                </div><br>
+            </div>
+                
+                <div class="navbar-header">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <% for(var i=0;i<navlinks.length;i++){ %>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="<%=navlinks[i].link%>"><%=navlinks[i].title%></a>
+                                    </li>
+                                <% } %>
+                                <% for(var k=0;k<navdropdown.length;k++){ %>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <%=navdropdown[k].title%>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <% for(var r=0;r<courses.length;r++){ %>
+                                                <a class="dropdown-item" href="#"><%=courses[r].name%></a><div class="dropdown-divider"></div>
+                                            <% } %>
+                                        </div>
+                                    </li>
+                                <%}%>
+                            </ul>
+                        </div>
+                    </nav>                        
+
+            </div>
+        </div>
+    </header>
+        <div id="masthead">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1><%=title%><p class="lead"></p></h1>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="well well-lg"> 
+                            <div class="row">
+                                <div class="col-sm-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-spacer"> </div>
+                </div>
+            </div>
+        </div>
+        <!--contents-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="row">
+                                Together we learn, teach and Grow.<br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!--contents-->
+
+
+</body>
+</html>
