@@ -24,7 +24,7 @@ app.get('/',function(req,res){
 
 });
 app.get('/:coursename')
-app.listen(6000,function(){
+app.listen(8080,function(){
     
-    console.log("listening to port 6000");
+    console.log("listening to port 8080");
 });
