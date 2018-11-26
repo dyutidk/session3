@@ -8,9 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+		
 		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -27,7 +25,7 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <% for(var i=0;i<nav.length;i++){ %>
+        <%for(var i=0;i<nav.length;i++){%>
         <li>
           <a href="<%=nav[i].link%>"><%=nav[i].title%></a>
         </li>
@@ -90,28 +88,35 @@
           
           
           <!--/stories-->
-          <%for(var i=0;i<books.length;i++){%>
+          
             <div class="row"> 
 
                 <br>
                 <div class="col-md-2 col-sm-3"></div>
                 
                 <div class="col-md-10 col-sm-9">
-                <h3><%=books[i].bookname%></h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                    <h4><span class="label label-default"><%=books[i].author%></span></h4><h4>
-                    <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].publication%><br>
-                    <small style="font-family:courier,'new courier';" class="text-muted"><%=books[i].genre%><br>
-                    <a href="/books/<%=books[i]._id%>" class="text-muted">Read More</a></small>
-                    </h4></div>
-                    <div class="col-xs-3"></div>
+                  <form class="form" method="get" action="/addauthor/add">
+                  
+                  
+                    <div class="row">
+                        <div class="col-sm-10">
+
+                            <input type="text" name="authorname" placeholder=" Enter author name"><br><br>
+                            <input type="text" name="language" placeholder=" Enter language"><br><br>
+                            
+                            <button class="btn btn-info" type="submit">ADD AUTHOR</button>
+                        </div>
+                        
+                    </div>
+                  </form>
+                </div>
+                <div class="col-xs-3"></div>
                 </div>
                 <br><br>
                 </div>
             </div>
             <hr>
-            <%}%>
+           
           
           
           <!--/stories-->
@@ -174,4 +179,3 @@
 		<script src="/js/bootstrap.min.js"></script>
 	</body>
 </html>
-                
